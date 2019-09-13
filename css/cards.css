@@ -1,0 +1,43 @@
+.card-body{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.card-title{
+	font-size: 1.1rem;
+	overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;	
+}
+
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+    outline: none !important;
+    box-shadow:none !important;
+}
+.btn-card.option-l{
+	border-radius: 8px 0px 0px 8px;
+}
+.btn-card.option-m{
+	border-radius: 0px;
+}
+.btn-card.option-r{
+	border-radius: 0px 8px 8px 0px;
+}
+.card-img-top{
+	text-align: center;
+	margin-top: 15px;
+	max-height: 220px;
+	max-width: 153px;
+
+}
+.card{
+	text-align: center;
+	margin-top: 16px;
+}
+.btn.isFav span{
+	color: white;
+}
+.btn.isFav span{
+	color: yellow;
+}

@@ -1,0 +1,24 @@
+<script type="text/javascript">
+	$('.content-page').empty();
+	db.moviesList.forEach(function (movie, index) {
+		let favBtn = "";
+		db.favoritesList.forEach(function (fav, i) {
+			if (movie.name == fav.name){
+				console.log("fferrr")
+				favBtn = "isFav";
+			} 
+
+		});
+		const movieElement = `
+		<div class="card col-md-3 d-inline-block" style="width: 18rem;">
+		  <img src="${movie.img}"  class="card-img-top" alt="...">
+		  <div class="card-body">
+		    <h5 class="card-title">${movie.name}</h5>
+		    <a href="#" class="btn btn-card option-l btn-primary col-md-4 d-inline-block"><span class="glyphicon glyphicon-eye-open"></span>
+		    </a><a href="#" class="btn ${favBtn} btn-card option-m btn-primary col-md-4 d-inline-block"><span class="glyphicon glyphicon-star"></span>
+		    </a><a href="#" class="btn btn-card btn-outline-none option-r btn-primary col-md-4 d-inline-block"><span class="glyphicon glyphicon-eye-open"></span></a>
+		  </div>
+		</div>`;
+		$('.content-page').append(movieElement);
+	});
+</script>
