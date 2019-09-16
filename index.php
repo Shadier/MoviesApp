@@ -15,18 +15,23 @@
 <body>
 	<?php require_once ("components/header.html"); ?>
 	<div class="container-fluid col-md-12">
-		<div class="align-top container d-inline-block col-md-3">
+		<div id="comments" class="align-top container d-inline-block col-md-4">
 			<?php require_once ("components/sidebar.html"); ?>
-		</div><div id="content-div" class="align-top container d-inline-block content-page col-md-9">
+			<div>
+				<input type="text" name="comment">
+				<button id="btn-send-comment" class="btn"><span class="glyphicon glyphicon-send	
+"></span></button>
+			</div>
+		</div><div id="content-div" class="align-top container d-inline-block content-page col-md-8">
 			<?php require_once ("components/home.html"); ?>
 		</div>
 	</div>
 
-	<div class="alert alert-success alert-dismissible fade show position-absolute" role="alert">
-	  <p class="d-inline-block">Congrats</p>
-	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-	    <span aria-hidden="true">&times;</span>
-	  </button>
+	<div id="alert-success" class="alert alert-success fade position-absolute" role="alert">
+	  <p class="d-inline-block">Movie added to favorites successfully!!</p>
+	</div>
+	<div id="alert-danger" class="alert alert-danger fade position-absolute" role="alert">
+	  <p class="d-inline-block">Movie removed from favorites!!</p>
 	</div>
 
 
