@@ -15,22 +15,20 @@
 <body>
 	<?php require_once ("components/header.html"); ?>
 	<div class="container-fluid col-md-12">
-		<div id="comments" class="align-top container d-inline-block col-md-4">
+		<div id="comments" class="align-top container d-inline-block col-sm-6 col-md-4 col-lg-3">
 			<?php require_once ("components/sidebar.html"); ?>
-			<div>
-				<input type="text" name="comment">
-				<button id="btn-send-comment" class="btn"><span class="glyphicon glyphicon-send	
-"></span></button>
+			<div id="add-comments">
+				<input type="text" name="comment" id="input-comment"><button id="btn-send-comment" class="btn"><span class="glyphicon glyphicon-send	"></span></button>
 			</div>
-		</div><div id="content-div" class="align-top container d-inline-block content-page col-md-8">
+		</div><div id="content-div" class="align-top container d-inline-block content-page col-sm-6 col-md-8 col-lg-9">
 			<?php require_once ("components/home.html"); ?>
 		</div>
 	</div>
 
-	<div id="alert-success" class="alert alert-success fade position-absolute" role="alert">
+	<div id="alert-success" class="alert alert-success fade position-fixed" role="alert">
 	  <p class="d-inline-block">Movie added to favorites successfully!!</p>
 	</div>
-	<div id="alert-danger" class="alert alert-danger fade position-absolute" role="alert">
+	<div id="alert-danger" class="alert alert-danger fade position-fixed" role="alert">
 	  <p class="d-inline-block">Movie removed from favorites!!</p>
 	</div>
 
@@ -42,3 +40,6 @@
 	<script type="text/javascript" src="js/menu.js"></script>
 </body>
 </html>
+
+
+

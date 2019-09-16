@@ -14,7 +14,6 @@ $(document).ready(function() {
 		      $('.content-page').append(data);
 		    }
 		});
-		window.history.pushState({page: 1}, $(this).attr("href"), $(this).attr("href"));
 		$(".nav-item").removeClass("active");
 		$(this).addClass("active");
 	});
@@ -29,8 +28,6 @@ $(document).ready(function() {
 		      $('.content-page').append(data);
 		    }
 		});
-
-		window.history.pushState({page: 1}, $(this).children("a").attr("href"), $(this).children("a").attr("href"));
 		$(".dropdown-toggle").removeClass("active");
 		$(".nav-item").removeClass("active");
 		$(this).addClass("active");

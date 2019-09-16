@@ -43,9 +43,12 @@ span.glyphicon{
 
 
 .alert{
+	position: fixed;
+	z-index: 200000;
 	right: 20px;
 	padding-top: 5px;
-	bottom: 20px;
+	bottom: -50px;
+	transition: all 0.5s;
 }
 	.alert p{
 		vertical-align: middle;
@@ -59,6 +62,10 @@ span.glyphicon{
 	.alert button{
 		outline: none !important;
 		padding: 6px !important;
+	}
+	.alert.show{
+		bottom: 20px;
+		transition: all 0.5s;
 	}
 
 .alert{
