@@ -106,3 +106,9 @@ span.glyphicon{
 	background-color: white !important;
 	overflow-y: scroll;
 }
+
+#content-div p{
+	color: lightgray;
+    padding: 40px;
+    margin-top: 80px;
+}

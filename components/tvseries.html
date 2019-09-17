@@ -1,1 +1,21 @@
-Tv series page
+<script type="text/javascript">
+	$('.content-page').empty();
+	db.seriesList.forEach(function (serie, index) {
+		let favBtn = "";
+		db.favoritesList.forEach(function (fav, i) {
+			if (serie.name == fav.name){
+				console.log("fferrr")
+				favBtn = "isFav";
+			} 
+
+		});
+		const serieElement = `<div class="card col-xs-12 col-sm-12 col-md-4 d-inline-block">
+		  <img src="${serie.img}"  class="red-tooltip card-img-top" alt="..." data-toggle="tooltip" data-placement="right" title="${serie.name} -  English/Spanish - 1080p">
+		  <div class="card-body col-xs-12">
+		    <h5 class="card-title">${serie.name}</h5>
+		    <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-card option-l btn-primary col-xs-1 d-inline-block"><span class="glyphicon glyphicon-eye-open"></span></a><a href="#" class="btn ${favBtn} btn-card option-m btn-primary col-xs-1 d-inline-block"><span class="glyphicon glyphicon-star"></span></a><a href="#" class="btn btn-card btn-outline-none option-r btn-primary col-xs-1 d-inline-block"><span class="	glyphicon glyphicon-list"></span></a>
+		  </div>
+		</div>`;
+		$('.content-page').append(serieElement);
+	});
+</script>

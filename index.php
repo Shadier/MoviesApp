@@ -20,7 +20,7 @@
 <body>
 	<?php require_once ("components/header.html"); ?>
 	<div id="p-container" class="container-fluid col-md-12">
-		<div id="comments" class="align-top container d-inline-block col-sm-6 col-md-5 col-lg-4">
+		<div id="comments" class="d-none d-sm-inline-block align-top container col-sm-6 col-md-5 col-lg-4">
 			<?php require_once ("components/sidebar.html"); ?>
 			<div id="add-comments">
 				<input type="text" placeholder="Write a comment..." name="comment" id="input-comment"><button id="btn-send-comment" class="btn"><span class="glyphicon glyphicon-send	"></span></button>
@@ -57,9 +57,7 @@
 	    </div>
 	  </div>
 	</div>
-
 </body>
 </html>
-
 
 
