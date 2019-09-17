@@ -32,6 +32,7 @@
 
 }
 .card{
+	border: 0px;
 	text-align: center;
 	margin-top: 16px;
 }

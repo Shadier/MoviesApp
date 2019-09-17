@@ -37,7 +37,14 @@ $(document).ready(function() {
 
 
 
-
+	$("#btn-close-comments").click(function(event){
+		$("#content-div").css("cssText", "display: inline-block !important;");
+		$("#comments").css("cssText", "display: none !important;");
+	});
+	$("body").on("click", ".card a.btn.option-r", function(event){
+		$("#comments").css("cssText", "display: inline-block !important;");
+		$("#content-div").css("cssText", "display: none !important;");
+	});
 
 
 	$("body").on("click", ".card a.btn.option-m", function(event){
@@ -80,7 +87,7 @@ $(document).ready(function() {
 	});
 
 	setTimeout(moveScroll(), 100);
-
+	setTimeout(sizeOfElements(), 100);
 });
 
 function moveScroll() {
@@ -90,3 +97,18 @@ function moveScroll() {
 function closeAlert() {
 	$('.alert').removeClass('show');
 }
+
+function sizeOfElements() {
+	var height = $(window).height() - $(".navbar").height();
+	if (height < 350) {
+		height = 350;
+	}
+	var height2 = height - $("#carouselExampleIndicators").height() - 37;
+	$("#p-container").css('cssText', 'min-height: '+height+'px;'+'height: '+height+'px;'+'max-height: '+height+'px;');
+	$("#content-div").css('cssText', 'min-height: '+height+'px;'+'height: '+height+'px;'+'max-height: '+height+'px;');
+	$(".scroll").css('cssText', 'min-height: '+height2+'px;'+'height: '+height2+'px;'+'max-height: '+height2+'px;');
+}
+
+$( window ).resize(function() {
+	setTimeout(sizeOfElements(), 100);
+});

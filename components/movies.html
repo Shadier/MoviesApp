@@ -13,7 +13,7 @@
 		  <img src="${movie.img}"  class="card-img-top" alt="...">
 		  <div class="card-body col-xs-12">
 		    <h5 class="card-title">${movie.name}</h5>
-		    <a href="#" class="btn btn-card option-l btn-primary col-xs-1 d-inline-block"><span class="glyphicon glyphicon-eye-open"></span></a><a href="#" class="btn ${favBtn} btn-card option-m btn-primary col-xs-1 d-inline-block"><span class="glyphicon glyphicon-star"></span></a><a href="#" class="btn btn-card btn-outline-none option-r btn-primary col-xs-1 d-inline-block"><span class="	glyphicon glyphicon-list"></span></a>
+		    <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-card option-l btn-primary col-xs-1 d-inline-block"><span class="glyphicon glyphicon-eye-open"></span></a><a href="#" class="btn ${favBtn} btn-card option-m btn-primary col-xs-1 d-inline-block"><span class="glyphicon glyphicon-star"></span></a><a href="#" class="btn btn-card btn-outline-none option-r btn-primary col-xs-1 d-inline-block"><span class="	glyphicon glyphicon-list"></span></a>
 		  </div>
 		</div>`;
 		$('.content-page').append(movieElement);
